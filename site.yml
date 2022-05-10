@@ -1,0 +1,11 @@
+---
+- name: Setup laptop
+  hosts: localhost
+  connection: local
+  roles:
+    - 1password
+    - chromium
+    - docker
+    - virtualbox
+    - vscode
+    

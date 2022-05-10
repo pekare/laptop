@@ -1,0 +1,26 @@
+---
+
+- name: Install
+  package:
+    name: virtualbox
+    state: present
+  become: yes
+
+- name: Install extension
+  package:
+    name: virtualbox-ext-pack
+    state: present
+  become: yes
+  
+- name: Install additions
+  package:
+    name: virtualbox-guest-additions-iso
+    state: present
+  become: yes
+
+- name: Install vagrant
+  package:
+    name: vagrant
+    state: present
+  become: yes
+  

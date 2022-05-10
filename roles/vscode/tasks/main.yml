@@ -1,0 +1,17 @@
+---
+
+- name: Install
+  apt:
+    deb: https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
+  become: yes
+
+- name: Install extensions
+  command: "/usr/bin/code --install-extension {{ item }}"
+  loop:
+    - wholroyd.jinja
+    - ms-azuretools.vscode-docker
+    - ms-python.python
+    - ms-python.vscode-pylance
+    - ms-vscode.cpptools
+    - redhat.ansible
+    - redhat.vscode-yaml

@@ -1,0 +1,7 @@
+---
+
+- name: Install
+  package:
+    name: chromium
+    state: present
+  become: yes
