@@ -6,6 +6,13 @@
     state: present
   become: yes
 
+- name: Accept extension pack license
+  debconf:
+    name: virtualbox-ext-pack
+    question: virtualbox-ext-pack/license
+    value: 'true'
+    vtype: select
+
 - name: Install extension
   package:
     name: virtualbox-ext-pack
