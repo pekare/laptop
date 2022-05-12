@@ -9,10 +9,11 @@ sudo apt install ansible -y
 ```
 mkdir ~/github
 cd ~/github
-git clone git@github.com:pekare/laptop.git
+git clone https://github.com/pekare/laptop.git
 ```
 
 # run playbook
 ```
+cd ~/github/laptop
 ansible-playbook -K site.yml
 ```
