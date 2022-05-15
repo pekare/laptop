@@ -11,9 +11,15 @@
     deb: https://downloads.1password.com/linux/debian/amd64/stable/1password-latest.deb
   become: yes
 
+- name: Ensure ssh config exists
+  file:
+    path: "{{ ansible_env.HOME }}/.ssh/config"
+    state: touch
+    mode: 0600
+
 - name: Enable ssh-agent
   blockinfile:
-  path: "{{ ansible_env.HOME }}/.ssh/config"
+    path: "{{ ansible_env.HOME }}/.ssh/config"
     block: |
       Host *
         IdentityAgent ~/.1password/agent.sock
