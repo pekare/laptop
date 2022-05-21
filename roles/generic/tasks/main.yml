@@ -8,3 +8,4 @@
   loop:
     - chromium
     - libreoffice
+    - network-manager-openvpn
