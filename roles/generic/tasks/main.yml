@@ -9,3 +9,4 @@
     - chromium
     - libreoffice
     - network-manager-openvpn
+    - python3-venv
