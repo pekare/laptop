@@ -10,3 +10,15 @@
     - libreoffice
     - network-manager-openvpn
     - python3-venv
+
+- name: Configure git user
+  git_config:
+    name: user.email
+    value: "carl@pekare.se"
+    scope: global
+ 
+- name: Configure git user
+  git_config:
+    name: user.name
+    value: "Carl Larsson"
+    scope: global
