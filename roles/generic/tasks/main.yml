@@ -10,6 +10,7 @@
     - libreoffice
     - network-manager-openvpn
     - python3-venv
+    - seclists
 
 - name: Configure git user
   git_config:
