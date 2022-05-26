@@ -3,8 +3,8 @@
   hosts: localhost
   connection: local
   roles:
+    - generic
     - 1password
-    - chromium
     - docker
     - virtualbox
     - vscode
