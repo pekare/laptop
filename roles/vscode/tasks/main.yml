@@ -23,4 +23,15 @@
     state: present
   loop:
     - ipykernel
-    - bash_kernel
+    - notebook
+    - nbconvert
+  become: yes
+
+- name: Install packages for jupyter pdf export
+  apt:
+    name: "{{ item }}"
+  loop:
+    - texlive-xetex
+    - texlive-fonts-recommended
+    - texlive-plain-generic
+  become: yes
