@@ -12,13 +12,13 @@
     - python3-venv
     - seclists
 
-- name: Configure git user
+- name: Configure git email
   git_config:
     name: user.email
     value: "carl@pekare.se"
     scope: global
  
-- name: Configure git user
+- name: Configure git name 
   git_config:
     name: user.name
     value: "Carl Larsson"

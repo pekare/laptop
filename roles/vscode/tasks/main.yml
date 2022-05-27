@@ -16,3 +16,11 @@
     - redhat.ansible
     - redhat.vscode-yaml
     - shd101wyy.markdown-preview-enhanced
+
+- name: Install python packages for jupyter
+  pip:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - ipykernel
+    - bash_kernel
