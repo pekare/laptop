@@ -23,8 +23,18 @@
     state: present
   loop:
     - ipykernel
+    - bash_kernel
     - notebook
     - nbconvert
+    - jupyter_contrib_nbextensions
+  become: yes
+
+- name: Install ipython bash kernel
+  command: /usr/bin/python -m bash_kernel.install
+  become: yes
+
+- name: Install nbextension javacsript and css files
+  command: /usr/local/bin/jupyter contrib nbextension install --system
   become: yes
 
 - name: Install packages for jupyter pdf export
@@ -34,4 +44,5 @@
     - texlive-xetex
     - texlive-fonts-recommended
     - texlive-plain-generic
+    - pandoc
   become: yes
